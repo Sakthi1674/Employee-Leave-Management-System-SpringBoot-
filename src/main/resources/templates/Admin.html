@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="Admin.css">
+</head>
+<body>
+<h1>Leave Requests</h1>
+<table border="1">
+  <thead>
+  <tr>
+    <th>EID</th>
+    <th>Employee Name</th>
+    <th>Reason</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Status</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="leaveRequest : ${dataList}">
+    <td th:text="${leaveRequest.EID}"></td>
+    <td th:text="${leaveRequest.E_NAME}"></td>
+    <td th:text="${leaveRequest.reason}"></td>
+    <td th:text="${leaveRequest.start_date}"></td>
+    <td th:text="${leaveRequest.end_date}"></td>
+    <td th:text="${leaveRequest.status}"></td>
+    <td>
+      <form th:action="@{/acceptLeave}" method="post">
+        <input type="hidden" name="EID" th:value="${leaveRequest.EID}">
+        <button type="submit">Accept</button>
+      </form>
+      <form th:action="@{/declineLeave}" method="post">
+        <input type="hidden" name="EID" th:value="${leaveRequest.EID}">
+        <button type="submit">Decline</button>
+      </form>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

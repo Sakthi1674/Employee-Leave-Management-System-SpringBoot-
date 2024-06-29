@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Dashboard</title>
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+<!-- Navbar Section -->
+<section class="navbar-section">
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="brand">Leave Management</a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="Home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="Login" class="nav-link">User Login</a></li>
+                <li class="nav-item"><a href="Adminlogin" class="nav-link">Admin Login</a></li>
+            </ul>
+        </div>
+    </nav>
+</section>
+
+<!-- Main Content Section -->
+<section class="main-content">
+    <div class="container">
+        <div class="pending-requests">
+            <h2>Welcome to employee leave management</h2>
+            <div class="request">
+                <div class="details">
+                    <p><strong>Start Date:</strong> 17 Feb, 2020</p>
+                    <p><strong>Leave Type:</strong> Casual Leave</p>
+                    <p><strong>Reason:</strong> Personal Emergency</p>
+                </div>
+                <div class="status">
+                    <p>Status: <span class="pending">Pending</span></p>
+                </div>
+            </div>
+            <div class="request">
+                <div class="details">
+                    <p><strong>Start Date:</strong> 28 Feb, 2020</p>
+                    <p><strong>Leave Type:</strong> Privileged Leave</p>
+                    <p><strong>Reason:</strong> Personal Emergency</p>
+                </div>
+                <div class="status">
+                    <p>Status: <span class="pending">Pending</span></p>
+                </div>
+            </div>
+              <a href="Login"><button class="apply-button">Apply Leave</button></a>
+<!--            <div class="links">-->
+<!--                <a href="#">Request Compensatory Off</a>-->
+<!--                <a href="#">Leave Policy Explanation</a>-->
+<!--            </div>-->
+<!--        </div>-->
+        <div class="balances">
+            <h2>Leave Balances</h2>
+            <div class="balance">
+                <h3>Sick Leave</h3>
+                <div class="circle" style="background: conic-gradient(#ff3366 0% 25%, #e0e0e0 25% 100%);">
+                    <p>3 days</p>
+                </div>
+            </div>
+            <div class="balance">
+                <h3>Privileged Leave</h3>
+                <div class="circle" style="background: conic-gradient(#00cc66 0% 58%, #e0e0e0 58% 100%);">
+                    <p>7 days</p>
+                </div>
+            </div>
+            <div class="balance">
+                <h3>Floater Holiday</h3>
+                <div class="circle" style="background: conic-gradient(#ffcc00 0% 8%, #e0e0e0 8% 100%);">
+                    <p>1 day</p>
+                </div>
+            </div>
+            <div class="balance">
+                <h3>Casual Leave</h3>
+                <div class="circle" style="background: conic-gradient(#00aaff 0% 17%, #e0e0e0 17% 100%);">
+                    <p>2 days</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <img src="data:image/png;base64,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" alt="Company Logo" class="footer-logo">
+    <p>Address: 1234 Innovation Drive, Tech City, TX 78901</p>
+    <p>Phone: (123) 456-7890</p>
+    <p>Email: <a href="mailto:info@company.com">info@company.com</a></p>
+    <p>Website: <a href="http://www.company.com" target="_blank">www.company.com</a></p>
+
+    <p>&copy; 2024 Company Name. All rights reserved.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="LeaveForm.css"></link>
+    <title>EmployeeLeaveForm</title>
+
+</head>
+<body>
+<div class="form-container">
+    <h2>Employee Leave Request Form</h2>
+    <form action="/LeaveForm" method="post">
+        <label for="employee_id">Employee ID:</label><br>
+        <input type="text" id="employee_id" name="employee_id" required><br>
+
+        <label for="employee_name">Employee Name:</label><br>
+        <input type="text" id="employee_name" name="employee_name" required><br>
+
+        <label for="reason">Reason for Leave:</label><br>
+        <textarea id="reason" name="reason" rows="4" required></textarea><br>
+
+        <label for="start_date">From:</label><br>
+        <input type="date" id="start_date" name="start_date" required><br>
+
+        <label for="end_date">To:</label><br>
+        <input type="date" id="end_date" name="end_date" required><br>
+
+        <input type="submit" value="Send a request">
+    </form>
+</div>
+</body>
+</html>
